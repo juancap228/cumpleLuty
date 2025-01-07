@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Viaje</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: black;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .flag {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 3em;
+        }
+
+        .scene {
+            text-align: center;
+            font-size: 2em;
+        }
+
+        .emoji {
+            font-size: 4em;
+            margin: 20px 0;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: appear 1s ease-out forwards;
+        }
+
+        .emoji:nth-child(1) { animation-delay: 0s; }
+        .emoji:nth-child(2) { animation-delay: 1s; }
+        .emoji:nth-child(3) { animation-delay: 2s; }
+        .emoji:nth-child(4) { animation-delay: 3s; }
+        .emoji:nth-child(5) { animation-delay: 4s; }
+        .emoji:nth-child(6) { animation-delay: 5s; }
+
+        @keyframes appear {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .nav-button {
+            position: absolute;
+            z-index: 10;
+            color: white;
+            background-color: rgba(255, 0, 0, 0.8);
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1em;
+            font-weight: bold;
+        }
+
+        .back-button {
+            top: 20px;
+            left: 20px;
+        }
+
+        .next-button {
+            bottom: 20px;
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="flag"></div>
+    <a href="index.html" class="nav-button back-button">⬅ Volver</a>
+
+    <div class="scene">
+        <div class="emoji">🏢</div> <!-- Aeropuerto Uruguay -->
+        <div class="emoji">✈️</div> <!-- Avión -->
+        <div class="emoji">🛫</div> <!-- Despegue -->
+        <div class="emoji">🌌</div> <!-- Vuelo -->
+        <div class="emoji">🛬</div> <!-- Aterrizaje -->
+        <div class="emoji">👩‍❤️‍👨</div> <!-- Tú y ella juntos -->
+    </div>
+
+    <a href="estar.html" class="nav-button next-button">Siguiente ➡</a>
+</body>
+</html>

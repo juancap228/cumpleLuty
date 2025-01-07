@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estar Contigo</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: black;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-out;
+        }
+
+        p {
+            font-size: 1.5em;
+            margin: 20px 0;
+            animation: fadeIn 2s ease-out;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        img {
+            max-width: 80%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+            opacity: 1; /* La imagen es visible desde el principio */
+        }
+
+        a {
+            color: white;
+            background-color: rgba(255, 0, 0, 0.8);
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.5em;
+            margin-top: 20px;
+            opacity: 1; /* El botón es visible desde el principio */
+        }
+    </style>
+</head>
+<body>
+    <a href="viaje.html" class="nav-button back-button">⬅ Volver</a>
+    <h1>Mi Amor 💖</h1>
+    <p>Me hubiera encantado estar contigo desde temprano,</p>
+    <p>para hacerte el desayuno, darte muchos besitos,</p>
+    <p>y celebrar juntos este día tan especial.</p>
+    <img src="img1.jpg" alt="Pareja abrazada bajo el amanecer">
+    <a href="moment.html" class="nav-button next-button">Siguiente ➡</a>
+</body>
+</html>

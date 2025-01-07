@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotos de Nosotros</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: black;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin: 20px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            max-width: 90%;
+            margin: 20px auto;
+            opacity: 0;
+            transition: opacity 2s ease-in;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            opacity: 0;
+            transform: scale(0.5);
+            transition: opacity 1s, transform 1s;
+        }
+
+        img.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        a {
+            color: white;
+            background-color: rgba(255, 0, 0, 0.8);
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.5em;
+            margin: 20px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mis Momentos Contigo ❤️</h1>
+    <p>Al final, todos estos recuerdos llenan mi corazón de felicidad.</p>
+    <div class="gallery" id="gallery">
+        <!-- Las imágenes se llenarán automáticamente con JavaScript -->
+    </div>
+    <a href="videos.html">Siguiente</a>
+
+    <script>
+        const gallery = document.getElementById('gallery');
+        const imagePaths = [
+    'img/1.png', 'img/3.jpg', 'img/2.jpg', 'img/4.jpg', 'img/5.jpg',
+    'img/6.jpg', 'img/7.jpg', 'img/8.jpg', 'img/9.jpg', 'img/10.jpg',
+    'img/11.jpg', 'img/12.jpg', 'img/13.jpg', 'img/14.jpg', 'img/15.jpg',
+    'img/16.png', 'img/17.png', 'img/18.png', 'img/19.jpg'
+];
+
+
+
+        function fillGallery() {
+            gallery.style.opacity = 1; // Hacer visible la galería
+            imagePaths.forEach((path, index) => {
+                const img = document.createElement('img');
+                img.src = path;
+                img.alt = `Foto ${index + 1}`;
+                setTimeout(() => {
+                    img.classList.add('visible');
+                }, index * 300); // Tiempo entre cada imagen
+                gallery.appendChild(img);
+            });
+        }
+
+        // Llenar la galería después de un retraso (puedes ajustar el tiempo si hay animaciones antes)
+        setTimeout(fillGallery, 4000); // 4 segundos de retraso antes de empezar
+    </script>
+</body>
+</html>
